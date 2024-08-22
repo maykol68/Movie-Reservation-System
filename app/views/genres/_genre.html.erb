@@ -1,0 +1,10 @@
+<div id="<%= dom_id genre %>">
+  <p class="my-5">
+    <%= genre.name %>
+    <%= link_to t(".Edit"), edit_genre_path(genre), class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t(".Destroy"), genre_path(genre), method: :delete, data: { 
+                                      confirm: t(".confirm") }, 
+                                      class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  </p>
+
+</div>
