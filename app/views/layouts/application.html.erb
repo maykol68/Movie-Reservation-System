@@ -11,9 +11,12 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="bg-slate-950">
     <%= render 'shared/flash'%>
-    <main class="container mx-auto mt-28 px-5 flex">
+    <main class="container px-5">
+      <div class="w-full">
+        <%= render'shared/header'%>
+      </div>
       <%= yield %>
     </main>
   </body>

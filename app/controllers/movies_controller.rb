@@ -1,9 +1,11 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
+
 
   # GET /movies or /movies.json
   def index
-    @movies = Movie.all.with_attached_photo
+    @movies = Movie.all.with_attached_poster
   end
 
   # GET /movies/1 or /movies/1.json
@@ -28,7 +30,6 @@ class MoviesController < ApplicationController
       else
         render :new, status: :unprocessable_entity 
       end
-    end
   end
 
   # PATCH/PUT /movies/1 or /movies/1.json
