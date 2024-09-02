@@ -7,4 +7,6 @@ class Movie < ApplicationRecord
     validates :end_date, presence: true, uniqueness: true
     
     belongs_to :genre
+    has_many :showtimes
+    has_many :reservations, through: :showtimes
 end

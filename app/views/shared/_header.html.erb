@@ -3,9 +3,12 @@
                 <%= link_to  movies_path do %>
                         <h1 class="text-2xl hover:text-red-500 font-bold text-teal-400 font-serif "><%= t('app_name')%></h1>
                 <% end %>
-        
-                <%= render 'shared/items'%>
+                <div class="flex justify-end">
+                        <%= render 'shared/items_2'%>
+                        <%= render 'shared/items'%>
+
+                </div>
+                
         </div>
-        
-        
+        <hr class="underline text-white mb-8" />
 </header>
