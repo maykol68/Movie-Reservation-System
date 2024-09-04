@@ -12,28 +12,33 @@
   <% end %>
 
   <div class="my-5">
-    <%= form.label :title %>
+    <%= form.label :title, class:"text-white"%>
     <%= form.text_field :title, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :description %>
+    <%= form.label :description, class:"text-white" %>
     <%= form.text_field :description, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :poster %>
+    <%= form.label :start_date, class:"text-white" %>
+    <%= form.datetime_field :start_date, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :end_date, class:"text-white" %>
+    <%= form.datetime_field :end_date, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :poster, class:" text-white" %>
     <%= form.file_field :poster, class: ""  %>
   </div>
 
   <div class="my-5">
-    <%= form.label :genre %>
+    <%= form.label :genre, class:"text-white"%>
     <%= form.collection_select(:genre_id, Genre.all, :id, :name, { include_blank: true }, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full") %>
-  </div>
-  
-  <div class="my-5">
-    <%= form.label :poster %>
-    <%= form.file_field :poster, class: ""  %>
   </div>
 
 

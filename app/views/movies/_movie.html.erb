@@ -1,13 +1,26 @@
-<div id="<%= dom_id movie %>">
-  <%= image_tag movie.poster, width: 200 if movie.poster.attached? %>
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Title:</strong>
-    <%= movie.title %>
-  </p>
+<%= link_to movie_path(movie), id: dom_id(movie), class: "mb-4" do %>
+  <div class="bg-white w-[100%] h-[100%] flex flex-col items-center text-center cursor-pointer rounded-lg">
+    <div class="flex justify-center items-center mt-2">
+      <%= image_tag movie.poster, width: 400 if movie.poster.attached? %>
+    </div>
+    <p class="my-5">
+      <strong class="block font-medium ">Title:</strong>
+      <p class="text-gray-800"><%= movie.title %></p>
+    </p>
+    <% if action_name == "show" %>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Sinopsis:</strong>
+      <p class="text-gray-800"><%= movie.description %></p>
+    </p>
+    <% end %>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Start Date:</strong>
+      <p class="text-gray-800"><%= movie.start_date %></p>
+    </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Description:</strong>
-    <%= movie.description %>
-  </p>
-
-</div>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">End Date:</strong>
+      <p class="text-gray-800"><%= movie.end_date %></p>
+    </p>
+  </div>
+<% end %>
