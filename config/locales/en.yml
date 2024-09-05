@@ -1,6 +1,15 @@
 en:
   app_name: reservesation system
-
+  movies:
+    show:
+      reservations: "reserve"
+    new:
+      Not_authorized: "You are not allowed to access this"
+    title: "New Movie"
+    description: "New movie description goes here."
+  genres:
+    new:
+      Not_authorized: "You are not allowed to access this"
   shared:
     items_2:
       New_movie: "Add Movie"
