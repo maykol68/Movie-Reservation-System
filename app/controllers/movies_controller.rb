@@ -1,6 +1,7 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: %i[ show edit update destroy ]
   before_action :authorize_admin!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
 
   # GET /movies or /movies.json
